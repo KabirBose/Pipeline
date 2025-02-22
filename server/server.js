@@ -1,29 +1,30 @@
-// backend/server.js
 const express = require("express");
-const cors = require("cors");
-const formFiller = require("./formFiller"); // Your existing code in a separate file
+const puppeteer = require("puppeteer");
+
 const app = express();
+const PORT = 5001;
 
-app.use(cors());
-app.use(express.json());
-
-app.post("/api/fill-form", async (req, res) => {
+app.get("/run-script", async (req, res) => {
   try {
-    const { url } = req.body;
-    if (!url) {
-      return res.status(400).json({ error: "URL is required" });
-    }
+    const browser = await puppeteer.launch({
+      headless: false,
+    });
+    const page = await browser.newPage();
+    await page.goto("https://google.com");
 
-    // Start the form filling process
-    await formFiller.fillForm(url);
-    res.json({ message: "Form filling process started" });
+    const title = await page.title();
+
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+
+    await browser.close();
+
+    res.json({ success: true, title });
   } catch (error) {
-    console.error("Error:", error);
-    res.status(500).json({ error: "Failed to process form filling" });
+    console.error("Error running Puppeteer:", error);
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () =>
+  console.log(`Server running on http://localhost:${PORT}`)
+);
