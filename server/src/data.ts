@@ -1,4 +1,30 @@
-const userData = {
+interface User {
+  name: string;
+  email: string;
+  phone: string;
+  degree: string;
+  program: string;
+  experience: string[];
+  skills: string[];
+  location: string;
+  address: string;
+  postal: string;
+  website: string;
+  gender: string;
+  ethnicity: string;
+  sex: string;
+  religion: string;
+  age: string;
+  disability: string;
+  pronouns: string;
+}
+
+interface FileInfo {
+  resume: string;
+  coverLetter: string;
+}
+
+const userData: User = {
   name: "Kabir Bose",
   email: "kabirbose04@gmail.com",
   phone: "4166253954",
@@ -19,9 +45,9 @@ const userData = {
   pronouns: "He/him/his",
 };
 
-const fileConfig = {
+const fileConfig: FileInfo = {
   resume: "resume.pdf",
   coverLetter: "cover-letter.pdf",
 };
 
-module.exports = { userData, fileConfig };
+export { userData, fileConfig };
