@@ -1,22 +1,27 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
+const { fillForm } = require("./automate");
 
 const app = express();
 const PORT = 5001;
 
 app.get("/run-script", async (req, res) => {
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    await page.goto("https://google.com");
+    // const browser = await puppeteer.launch({
+    //   headless: false,
+    // });
+    // const page = await browser.newPage();
+    // await page.goto("https://google.com");
 
-    const title = await page.title();
+    // const title = await page.title();
 
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
 
-    await browser.close();
+    // await browser.close();
+
+    fillForm(
+      "https://sparelabs.pinpointhq.com/en/postings/06f682f6-594a-476b-aa7d-d009e3c52545/applications/new"
+    ).catch(console.error);
 
     res.json({ success: true, title });
   } catch (error) {
