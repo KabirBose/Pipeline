@@ -12,7 +12,7 @@
     "service_worker": "service-worker.js",
     "type": "module"
   },
-  "action": {},
-  "permissions": ["scripting"],
+  "action": { "default_popup": "index.html" },
+  "permissions": ["scripting", "tabs"],
   "host_permissions": ["http://*/*", "https://*/*"]
 }
