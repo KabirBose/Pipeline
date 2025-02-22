@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pipeline",
+  "version": "1.0.0",
+  "description": "A bot that automatically fills out job applications.",
+  "icons": {
+    "16": "/icons/pipe-32.png",
+    "32": "/icons/pipe-16.png",
+    "96": "/icons/pipe-32.png"
+  },
+  "action": { "default_popup": "index.html" },
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
