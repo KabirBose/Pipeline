@@ -301,10 +301,5 @@ async function fillForm(url) {
   console.log("Form filled! Please review before submitting.");
 }
 
-// run the function
-// fillForm(
-//   "https://sparelabs.pinpointhq.com/en/postings/06f682f6-594a-476b-aa7d-d009e3c52545/applications/new"
-// ).catch(console.error);
-
 // export function
 module.exports = { fillForm };
