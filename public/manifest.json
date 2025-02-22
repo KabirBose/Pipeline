@@ -8,10 +8,6 @@
     "32": "/icons/pipe-16.png",
     "96": "/icons/pipe-32.png"
   },
-  "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
-  },
   "action": { "default_popup": "index.html" },
   "permissions": ["scripting", "tabs"],
   "host_permissions": ["http://*/*", "https://*/*"]
