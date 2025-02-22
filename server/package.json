@@ -1,13 +1,13 @@
 {
-  "name": "server",
+  "name": "pipeline-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kabir Bose",
   "license": "ISC",
-  "description": "",
+  "description": "Back-end server for Pipeline project",
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
     "dotenv": "^16.4.7",
