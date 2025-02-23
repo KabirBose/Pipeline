@@ -1,12 +1,12 @@
 import express from "express";
-import { initialBrowserSetup } from "./automate";
+import { automation } from "./automate";
 
 const app = express();
 const PORT = 5001;
 
 app.get("/run-script", async (req, res) => {
   try {
-    await initialBrowserSetup();
+    await automation("https://example.com/");
 
     res.json({ success: true, title: "Form submitted successfully" });
   } catch (error: unknown) {

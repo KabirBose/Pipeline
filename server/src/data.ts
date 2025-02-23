@@ -1,4 +1,4 @@
-interface User {
+interface UserData {
   name: string;
   email: string;
   phone: string;
@@ -19,12 +19,12 @@ interface User {
   pronouns: string;
 }
 
-interface FileInfo {
+interface FileConfig {
   resume: string;
   coverLetter: string;
 }
 
-const userData: User = {
+const userData: UserData = {
   name: "Kabir Bose",
   email: "kabirbose04@gmail.com",
   phone: "4166253954",
@@ -45,7 +45,7 @@ const userData: User = {
   pronouns: "He/him/his",
 };
 
-const fileConfig: FileInfo = {
+const fileConfig: FileConfig = {
   resume: "resume.pdf",
   coverLetter: "cover-letter.pdf",
 };

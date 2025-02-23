@@ -9,13 +9,20 @@ const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 let browser;
 let page;
 
-const initialBrowserSetup = async () => {
+const initialBrowserSetup = async (url: string) => {
   const browser = await puppeteer.launch({
     headless: false,
   });
   const page = await browser.newPage();
 
-  await page.goto("https://developer.chrome.com/");
+  await page.goto(url);
+
+  const pageHtml = await page.content();
+  console.log(pageHtml);
 };
 
-export { initialBrowserSetup };
+const automation = async (url: string) => {
+  initialBrowserSetup(url);
+};
+
+export { automation };
