@@ -24,6 +24,9 @@ interface FileConfig {
   coverLetter: string;
 }
 
+const url =
+  "https://sparelabs.pinpointhq.com/en/postings/06f682f6-594a-476b-aa7d-d009e3c52545/applications/new";
+
 const userData: UserData = {
   name: "Patrick Star",
   email: "patrickstar@gmail.com",
@@ -36,9 +39,9 @@ const userData: UserData = {
   address: "30 Bikini Bottom Way",
   postal: "L16471",
   website: "patrick.com",
-  gender: "Male",
+  gender: "Straight",
   ethnicity: "Starfish",
-  sex: "Heterosexual",
+  sex: "Male",
   religion: "Prefer not to say",
   age: "26",
   disability: "No",
@@ -50,4 +53,4 @@ const fileConfig: FileConfig = {
   coverLetter: "cover-letter.pdf",
 };
 
-export { userData, fileConfig };
+export { userData, fileConfig, url };

@@ -1,15 +1,13 @@
 import express from "express";
 import { fillForm } from "./automate";
+import { url } from "./data";
 
 const app = express();
-
 const PORT = 5001;
-const URL =
-  "https://sparelabs.pinpointhq.com/en/postings/06f682f6-594a-476b-aa7d-d009e3c52545/applications/new";
 
 app.get("/run-script", async (req, res) => {
   try {
-    await fillForm(URL).catch(console.error);
+    await fillForm(url).catch(console.error);
 
     res.json({ success: true });
   } catch (error: unknown) {
