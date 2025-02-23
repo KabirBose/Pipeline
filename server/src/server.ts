@@ -1,12 +1,12 @@
 import express from "express";
-import { automation } from "./automate";
+import { initialBrowserSetup } from "./automate";
 
 const app = express();
 const PORT = 5001;
 
 app.get("/run-script", async (req, res) => {
   try {
-    await automation("https://example.com/");
+    await initialBrowserSetup("https://example.com/");
 
     res.json({ success: true });
   } catch (error: unknown) {
