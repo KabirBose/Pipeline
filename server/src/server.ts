@@ -8,7 +8,7 @@ app.get("/run-script", async (req, res) => {
   try {
     await automation("https://example.com/");
 
-    res.json({ success: true, title: "Form submitted successfully" });
+    res.json({ success: true });
   } catch (error: unknown) {
     if (error instanceof Error) {
       res.status(500).json({ success: false, error: error.message });
