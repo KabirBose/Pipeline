@@ -10,12 +10,14 @@
   "description": "Back-end server for Pipeline project",
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "path": "^0.12.7",
     "puppeteer": "^24.2.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.5",
     "@types/puppeteer": "^5.4.7",

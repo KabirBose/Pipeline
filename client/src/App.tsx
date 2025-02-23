@@ -1,7 +1,9 @@
 const App = () => {
   const runPuppeteerScript = async () => {
     try {
-      const response = await fetch("http://localhost:5001/run-script");
+      const response = await fetch("http://localhost:5001/run-script", {
+        method: "POST",
+      });
       const data = await response.json();
       if (data.success) {
       } else {
