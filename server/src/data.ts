@@ -25,7 +25,7 @@ interface FileConfig {
 }
 
 const url =
-  "https://sparelabs.pinpointhq.com/en/postings/06f682f6-594a-476b-aa7d-d009e3c52545/applications/new";
+  "https://job-boards.greenhouse.io/octaura/jobs/4662934007?gh_src=79f1fc127us";
 
 const userData: UserData = {
   name: "Patrick Star",
