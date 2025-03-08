@@ -25,7 +25,7 @@ interface FileConfig {
 }
 
 const url =
-  "https://job-boards.greenhouse.io/octaura/jobs/4662934007?gh_src=79f1fc127us";
+  "https://job-boards.greenhouse.io/figureai/jobs/4451543006?source=LinkedIn";
 
 const userData: UserData = {
   name: "Patrick Star",
