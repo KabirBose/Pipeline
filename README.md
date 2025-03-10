@@ -18,7 +18,7 @@ This project is still in development and should only be used for testing/educati
 3. Create a `.env.local` file with your Gemini key in the server
 4. Populate relevant data in the `data.ts` file
 5. Add your resume and cover letter in the server folder
-6. Run the development server and start the Chrome extension
+6. Run the development server and unpack the Chrome extension
 
 # Demo
 
